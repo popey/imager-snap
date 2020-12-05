@@ -14,7 +14,7 @@ architectures:
 
 apps:
   rpi-imager:
-    command: bin/desktop-launch rpi-imager
+    command: bin/desktop-launch rpi-imager -platform xcb
     plugs:
       - x11
       - opengl
