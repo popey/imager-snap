@@ -15,6 +15,8 @@ architectures:
 apps:
   rpi-imager:
     command: bin/desktop-launch rpi-imager
+    environment:
+        DISABLE_WAYLAND: 1    
     plugs:
       - x11
       - opengl
@@ -55,6 +57,7 @@ parts:
       - locales-all
       - xdg-user-dirs
       - fcitx-frontend-qt5
+      - qtwayland5
   imagewriter:
     plugin: cmake
     source: https://github.com/raspberrypi/rpi-imager.git
